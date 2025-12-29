@@ -1,7 +1,7 @@
 FROM eclipse-temurin:21-jdk AS builder
 
 WORKDIR /usr/src/app/
-
+# Download dependencies and gradle wrapper set up to use as runtime build stage 
 COPY gradlew* settings.gradle* build.gradle .
 COPY ./gradle ./gradle
 
